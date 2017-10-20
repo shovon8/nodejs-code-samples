@@ -240,3 +240,70 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+// // Example 9 : Functional Inheritance
+// let User = (ops) => {
+//     var user = {};
+//     user.firstName = ops.firstName || 'Shahriar';
+//     user.lastName = ops.lastName || 'Shovon';
+//     user.email = ops.email || 'shovon@example.com';
+//     user.name = () => {
+//         return user.firstName + ' ' + user.lastName;
+//     };
+
+//     return user;
+// };
+
+
+// // Agency inherits User
+// let Agency = (ops) => {
+//     ops = ops || {};
+//     var agency = User(ops);
+//     agency.customers = ops.customers || 0;
+//     agency.isAgency = true;
+//     return agency;
+// };
+
+
+// let userObj = User({firstName: 'Alex', lastName: 'Cooper'});
+
+// let agencyObj = Agency({firstName: 'Alex', lastName: 'Cooper', customers: 5});
+// console.log(agencyObj);
+// console.log(userObj);
+// console.log(userObj.name());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Example 10: Print process ID or PID
+console.log(process.pid);
