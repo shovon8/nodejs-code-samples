@@ -255,3 +255,152 @@
 // console.log(numbers);
 // console.log(lessThan10Numbers);
 // console.log(greaterThan10Numbers);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Example 25: Sorting with Array.sort
+//
+// let numbers = [5, 2, 6, 9, 1, 4];
+//
+// let ascendingSort = (a, b) => {
+//     if(a > b) {
+//         return 1;
+//     }
+//
+//     if(a < b) {
+//         return -1;
+//     }
+//
+//     return 0;
+// };
+//
+// numbers.sort(ascendingSort);
+// console.log(numbers);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Example 26: Object sorting with Array.sort()
+// let peoples = [
+//     {name: 'Avril', age: 31},
+//     {name: 'Taylor', age: 21},
+//     {name: 'Chelsea', age: 35},
+//     {name: 'Britney', age: 15}
+// ];
+// console.log(peoples);
+//
+// let comparePeopleByAge = (a, b) => {
+//     return a.age - b.age;
+// };
+//
+//
+// peoples.sort(comparePeopleByAge);
+//
+// console.log(peoples);
+
+
+
+
+
+
+
+
+
+
+
+
+// // Example 27: Sorting string array
+// let list = ['Delta', 'alpha', 'CHARLIE', 'bravo'];
+// console.log(list);
+//
+// list.sort((a, b) => {
+//     return a.toLowerCase().charCodeAt(0) - b.toLowerCase().charCodeAt(0);
+// });
+// console.log(list);
+
+
+
+
+
+
+
+
+
+
+// // Example 28: reduce array to a value Array.prototype.reduce
+// let numbers = [0, 1, 2, 3, 4, 5, 6];
+//
+// let cbAddAllNumbers = (accumulator, current, index, array) => {
+//     return accumulator + current;
+// };
+//
+// let result = numbers.reduce(cbAddAllNumbers);
+//
+// console.log(numbers);
+// console.log(result);
+
+
+
+
+
+
+
+// // Example 29: reduce obj to a value - Array.prototype.reduceRight example
+// let transactions = [
+//     {date: '2017-01-01', amount: 500},
+//     {date: '2017-01-07', amount: -50},
+//     {date: '2017-01-11', amount: -10},
+//     {date: '2017-02-01', amount: 100},
+//     {date: '2017-02-10', amount: -400},
+//     {date: '2017-02-18', amount: 50},
+//     {date: '2017-02-20', amount: -5},
+//     {date: '2017-02-25', amount: 42}
+// ];
+//
+// let currentBalance = transactions.reduceRight((prev, current) => {
+//     return {amount: prev.amount + current.amount};
+// });
+//
+// console.log(`You have ${currentBalance.amount}$ in your account`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
