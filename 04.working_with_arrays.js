@@ -399,8 +399,400 @@
 
 
 
+// // Example 30: The in operator - Test whether an object property exists
+// let userObj = {
+//     firstName: 'Shahriar',
+//     lastName: 'Shovon',
+//     country: 'BD'
+// };
+
+// console.log('firstName' in userObj);
+// console.log('lastName' in userObj);
+// console.log('fullName' in userObj);
 
 
 
+
+
+
+
+
+
+
+
+
+// // Example 31: Array.prototype.map() initial value for the accumulator
+// let numbers = [1, 1, 1, 1, 1];
+
+// let reduceCallback = (accumulator, current) => {
+//     console.log(accumulator + ' - ' + current);
+//     return accumulator + current;
+// };
+
+// let total1 = numbers.reduce(reduceCallback);
+// console.log(`total1 is ${total1}`);
+
+// let total2 = numbers.reduce(reduceCallback, 5);
+// console.log(`total is ${total2}`);
+
+
+
+
+
+
+
+
+
+
+
+
+// // Example 32: Array.prototype.reduce() initial value for the accumulator
+// // A provided default value prevents reduce() to take initial 2 elements from the
+// // data set, instead, it takes 1 from the data set and uses the default value
+// // as the accumulator.
+// let names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
+
+// let reduceCallback = (accumulator, current) => {
+//     console.log(accumulator + ' - ' + current);
+//     return accumulator + ',' + current;
+// };
+
+// let total1 = names.reduce(reduceCallback);
+// console.log(`total1 is ${total1}`);
+
+// let total2 = names.reduce(reduceCallback, '');
+// console.log(`total is ${total2}`);
+
+
+
+
+
+
+
+
+
+
+
+// // Example 33 : Array.prototype.reduce() initial value for the accumulator
+// let names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
+
+// let callbackNameReduce = (accumulator, current) => {
+//     accumulator.push(current.toLowerCase());
+
+//     return accumulator;
+// };
+
+// let modifiedNames = names.reduce(callbackNameReduce, []);
+
+// console.log(names);
+// console.log(modifiedNames);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // // Example 34: Counting number of instances with Array.prototype.reduce()
+// let names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
+
+
+// let callbackNameCounter = (allNames, name) => {
+//     if(name in allNames) {
+//         allNames[name]++;
+//     } else {
+//         allNames[name] = 1;
+//     }
+
+//     return allNames;
+// };
+
+// let countedNames = names.reduce(callbackNameCounter, {});
+
+
+// console.log(names);
+// console.log(countedNames);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Example 35: JavaScript ES6 spread syntax
+// // Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator
+// let numbers1 = [1, 2, 3];
+// let numbers2 = [4, 5, 6];
+
+// let result = [...numbers1, ...numbers2];
+// console.log(result);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Example 36: Merging object properties with Array.prototype.reduce();
+// let friends = [{
+//     name: 'Anna',
+//     books: ['Bible', 'Harry Potter'],
+//     age: 21
+//   }, {
+//     name: 'Bob',
+//     books: ['War and peace', 'Romeo and Juliet'],
+//     age: 26
+//   }, {
+//     name: 'Alice',
+//     books: ['The Lord of the Rings', 'The Shining'],
+//     age: 18
+// }];
+
+// let callbackBookCollector = (bookList, friend) => {
+//     return [...bookList, ...friend.books];
+// };
+
+// let allBooks = friends.reduce(callbackBookCollector, []);
+
+// console.log(allBooks);
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Example 37: Searching for array element - Array.prototype.indexOf()
+// let numbers = [1, 5, 8];
+
+// // returns the position if found
+// console.log(numbers.indexOf(5));
+// console.log(numbers.indexOf(8));
+
+// // returns -1 if not found
+// console.log(numbers.indexOf(2)); 
+
+
+
+
+
+
+
+// // Example 38: Searching for array element - Array.prototype.indexOf()
+// // Start from a specific index
+// let numbers = [1, 5, 8, 2, 3, 1, 4, 5, 3, 1];
+
+// // finds the first 1
+// console.log(numbers.indexOf(1));
+
+// // finds 1 that occurs from the 2nd element
+// console.log(numbers.indexOf(1, 1));
+
+// // finds 1 that occurs from the 6th element
+// console.log(numbers.indexOf(1, 6));
+
+
+
+
+
+
+
+
+
+
+
+// // Example 39: Reverse Array elements: Array.prototype.reverse()
+// let numbers = [1, 5, 8, 2];
+// let friends = ['Alice', 'Bob', 'Lisa'];
+
+// console.log(numbers);
+// console.log(numbers.reverse());
+
+// console.log(friends);
+// console.log(friends.reverse());
+
+
+
+
+
+
+
+
+
+
+
+
+// //  Example 40: Array.prototype.slice() - Copies a portion or all of the array into a new array
+// // leaving the original array unchanged.
+// // Array.slice(start, end)
+// // NOTE: slice extracts up to but not including end.
+
+// let a = ['zero', 'one', 'two', 'three'];
+// let sliced = a.slice(1, 3);
+
+// console.log(a);
+// console.log(sliced);
+
+
+// let last2 = a.slice(-2);
+// console.log(last2);
+
+
+// let allFrom1 = a.slice(1);
+// console.log(allFrom1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Example 41: Array.prototype.splice() - remove elements from Array
+// //             0  1  2  3  4  5  6  7  8
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// let removedNumbers = numbers.splice(4);
+
+// console.log(numbers);
+// console.log(removedNumbers);
+
+
+
+
+
+
+
+
+
+
+// // Example 42: Array.prototype.splice() - remove elements from Array
+// //             0  1  2  3  4  5  6  7  8
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// // removes 2 element starting from index 4
+// let removedNumbers = numbers.splice(4, 2);
+
+// console.log(numbers);
+// console.log(removedNumbers);
+
+
+
+
+
+
+
+
+
+// // Example 43: Array.prototype.splice() - remove elements from Array
+// //             0  1  2  3  4  5  6  7  8
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// // removes 2 element from the end of the array
+// let removedNumbers = numbers.splice(-2, 2);
+
+// console.log(numbers);
+// console.log(removedNumbers);
+
+
+
+
+
+
+
+
+
+
+// // Example 44: Array.prototype.splice() - add element at any index
+// //             0  1  2  3  4  5  6  7  8
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// // add 1 number at index 2
+// numbers.splice(2, 0, 10);
+
+// console.log(numbers);
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Example 45: Array.prototype.splice() - add element at any index
+// //             0  1  2  3  4  5  6  7  8
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// // add at index 2
+// numbers.splice(2, 0, 10, 11);
+
+// console.log(numbers);
+
+
+
+
+
+
+
+
+
+
+// // Example 46: Array.prototype.splice() - add element at any index
+// //             0  1  2  3  4  5  6  7  8
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// // add at index 2
+// // numbers.splice(2, 0, [10, 11]);
+// numbers.splice(2, 0, {code: 65});
+
+// console.log(numbers);
 
 
