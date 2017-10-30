@@ -159,3 +159,47 @@
 // server.listen(PORT, () => {
 //     console.log('server started at port ' + PORT);
 // });
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Example 87 - using writeHead() method to set headers
+// let http = require('http');
+//
+// const PORT = 8080;
+//
+// let server = http.createServer((request, response) => {
+//     response.writeHead(200, {
+//         'Content-Type': 'text/html',
+//         'Author-Name': 'Shahriar Shovon',
+//         'Server': 'Node.js'
+//     });
+//     response.write('Hello <strong>HTTP</strong> from Node.js');
+//     response.end();
+// });
+//
+// server.listen(PORT, () => {
+//     console.log('server started at port ' + PORT);
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
